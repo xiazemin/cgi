@@ -1,4 +1,8 @@
 # FastCGI协议详解及代码实现
 
+FastCGI程序本身监听某个socket然后等待来自web服务器的连接，而不是像CGI程序是由web服务器 fork-exec，所以FastCGI本身是一个服务端程序，而web服务器对它来说则是客户端。
 
+
+
+FastCGI程序和web服务器之间通过可靠的流式传输（Unix Domain Socket或TCP）来通信，相对于传统的CGI程序，有环境变量和标准输入输出，而FastCGI程序和web服务器之间则只有一条socket连接来传输数据，所以它把数据分成以下多种消息类型
 
