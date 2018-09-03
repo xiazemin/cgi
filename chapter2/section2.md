@@ -26,6 +26,8 @@ CGI是common gateway interface的缩写，大家都译作通用网关接口，�
 
 以php为例，我将一次动态请求相关的概念大致都简单解释一遍。
 
+![](/assets/fpm.png)
+
 cgi：它是一种协议。通过cgi协议，web server可以将动态请求和相关参数发送给专门处理动态内容的应用程序。
 
 fastcgi：也是一种协议，只不过是cgi的优化版。cgi的性能较烂，fastcgi则在其基础上进行了改进。
