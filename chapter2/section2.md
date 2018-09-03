@@ -32,6 +32,8 @@ cgi：它是一种协议。通过cgi协议，web server可以将动态请求和�
 
 fastcgi：也是一种协议，只不过是cgi的优化版。cgi的性能较烂，fastcgi则在其基础上进行了改进。
 
+![](/assets/phpfpm.png)
+
 php-cgi：fastcgi是一种协议，而php-cgi实现了这种协议。不过这种实现比较烂。它是单进程的，一个进程处理一个请求，处理结束后进程就销毁。
 
 php-fmp：是对php-cgi的改进版，它直接管理多个php-cgi进程/线程。也就是说，php-fpm是php-cgi的进程管理器因此它也算是fastcgi协议的实现。在一定程度上讲，php-fpm与php的关系，和tomcat对java的关系是类似的。
