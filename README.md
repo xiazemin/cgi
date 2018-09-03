@@ -1,5 +1,7 @@
 # Introduction
 
+https://datatracker.ietf.org/doc/rfc3875/
+
 作为一个服务器，基本要求是能受理请求，提取信息并将消息分发给 CGI 解释器，再将解释器响应的消息包装后返回客户端。在这个过程中，除了和客户端 socket 之间的交互，还要牵扯到第三个实体 - 请求解释器。
 
 ![](/assets/cgi.png)
@@ -44,7 +46,7 @@ SCRIPT\_NAME 表示执行的解释器脚本名，必须设置；
 
 SERVER\_NAME 和 SERVER\_PORT 代表着大小写敏感的服务器名和服务器受理时的TCP/IP端口；
 
-SERVER\_PROTOCOL 字段指示着服务器与解释器协商的协议类型，不一定与客户端请求的SCHEMA 相同，如'[https://'可能为HTTP；](https://'可能为HTTP；)
+SERVER\_PROTOCOL 字段指示着服务器与解释器协商的协议类型，不一定与客户端请求的SCHEMA 相同，如'\[[https://'可能为HTTP；\]\(https://'可能为HTTP；](https://'可能为HTTP；]%28https://'可能为HTTP；)\)
 
 在 CONTENT-LENGTH 不为 NULL 时，服务器要提供信息体，此信息体要严格与长度相符，即使有更多的可读信息也不能多传；
 
